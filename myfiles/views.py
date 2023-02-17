@@ -11,6 +11,8 @@ def index(malumot):
     if 'WORD' in malumot.POST:
         text = str(malumot.POST.get('WORD'))
         print(text)
+
+
         text = text.strip()
         qidrish = Q(nomi__startswith = text)| Q(company_name__startswith = text)|\
                   Q(date__startswith = text)| Q(url__startswith = text)|\
